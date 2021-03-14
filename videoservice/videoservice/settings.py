@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'memberships'
+    'memberships',
+    'courses'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,10 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 MEDIA_URL = '/media/'
 
 if DEBUG:
-    STRIPE_PUBLISHABLE_KEY=""
-    STRIPE_SECRET_KEY=""
-    
+    STRIPE_PUBLISHABLE_KEY=''
+    STRIPE_SECRET_KEY=''
+
+else:
+    #live keys
+    STRIPE_PUBLISHABLE_KEY=''
+    STRIPE_SECRET_KEY=''
